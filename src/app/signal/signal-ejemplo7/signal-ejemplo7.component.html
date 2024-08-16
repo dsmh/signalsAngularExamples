@@ -3,7 +3,7 @@
 <ul>
     @for( product of products(); track product){
         <li>
-            {{product.name}} - {{product.price}}
+            {{product.name}} - {{product.price}} ---->
             @if(selectProductsIds().includes(product.id)){
                 <button mat-raised-button color="warn" (click)="removeFromCart(product)">
                     Remover
