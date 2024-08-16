@@ -11,12 +11,12 @@ import { interval, take } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class SignalEjemplo6Component {
-  /*counter$ = interval(1000);
+  counter$ = interval(1000).pipe(take(20));
   counter = toSignal(this.counter$);
 
-  counter2$ = interval(1000);
+  counter2$ = interval(1000).pipe(take(20));
   counterConValorInicial = toSignal(this.counter2$, {initialValue: 0});
-*/
+
   counter3$ = interval(200).pipe(take(20));
   counterUpTo5 = toSignal(this.counter3$);
 }
